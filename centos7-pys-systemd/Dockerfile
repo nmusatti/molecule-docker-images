@@ -1,4 +1,4 @@
-FROM pycontribs/centos:7
+FROM nmusatti/centos7-pys
 
 ENV container docker
 MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
