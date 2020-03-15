@@ -1,4 +1,5 @@
-FROM nmusatti/fedora-pys
+#FROM nmusatti/fedora-pys
+FROM pycontribs/fedora
 
 MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
 
