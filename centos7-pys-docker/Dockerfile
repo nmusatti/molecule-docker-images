@@ -4,4 +4,4 @@ ENV container docker
 MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
 
 COPY prelude prelude
-CMD ["/usr/bin/bash", "prelude"]
+CMD ["/usr/bin/bash", "start-systemd"]
