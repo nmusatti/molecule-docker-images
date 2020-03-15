@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set +x
+
 # Ensure that all nodes in /dev/mapper correspond to mapped devices currently loaded by the device-mapper kernel driver
 dmsetup mknodes
 
@@ -25,11 +27,11 @@ then
 fi
 
 # Mount the cgroup hierarchies exactly as they are in the parent system.
-for SUBSYS in $(cut -d: -f2 /proc/1/cgroup)
-do
-        [ -d $CGROUP/$SUBSYS ] || mkdir $CGROUP/$SUBSYS
-        mountpoint -q $CGROUP/$SUBSYS || 
-                mount -n -t cgroup -o $SUBSYS cgroup $CGROUP/$SUBSYS
+# for SUBSYS in $(cut -d: -f2 /proc/1/cgroup)
+# do
+#         [ -d $CGROUP/$SUBSYS ] || mkdir $CGROUP/$SUBSYS
+#         mountpoint -q $CGROUP/$SUBSYS || 
+#                 mount -n -t cgroup -o $SUBSYS cgroup $CGROUP/$SUBSYS
 
         # The two following sections address a bug which manifests itself
         # by a cryptic "lxc-start: no ns_cgroup option specified" when
@@ -44,18 +46,18 @@ do
         # Systemd and OpenRC (and possibly others) both create such a
         # cgroup. To avoid the aforementioned bug, we symlink "foo" to
         # "name=foo". This shouldn't have any adverse effect.
-        echo $SUBSYS | grep -q ^name= && {
-                NAME=$(echo $SUBSYS | sed s/^name=//)
-                ln -s $SUBSYS $CGROUP/$NAME
-        }
+#         echo $SUBSYS | grep -q ^name= && {
+#                 NAME=$(echo $SUBSYS | sed s/^name=//)
+#                 ln -s $SUBSYS $CGROUP/$NAME
+#         }
 
         # Likewise, on at least one system, it has been reported that
         # systemd would mount the CPU and CPU accounting controllers
         # (respectively "cpu" and "cpuacct") with "-o cpuacct,cpu"
         # but on a directory called "cpu,cpuacct" (note the inversion
         # in the order of the groups). This tries to work around it.
-        [ $SUBSYS = cpuacct,cpu ] && ln -s $SUBSYS $CGROUP/cpu,cpuacct
-done
+#         [ $SUBSYS = cpuacct,cpu ] && ln -s $SUBSYS $CGROUP/cpu,cpuacct
+# done
 
 # Note: as I write those lines, the LXC userland tools cannot setup
 # a "sub-container" properly if the "devices" cgroup is not in its
@@ -81,7 +83,7 @@ do
 done
 popd >/dev/null
 
-/usr/sbin/init
+/usr/lib/systemd/systemd --system --unit=basic.target
 exit
 
 # If a pidfile is still around (for example after a container restart),
