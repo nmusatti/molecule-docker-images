@@ -11,3 +11,6 @@ The images currently available are:
 The CentOS 8 based images aren't currently available, due to a problem with base images:
 - [centos8-pys](https://hub.docker.com/repository/docker/nmusatti/centos8-pys)
 - [centos8-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/centos8-pys-systemd)
+
+All Dockerfiles are directly derived from those made available by the [Pycontribs](https://github.com/pycontribs) and the
+[CentOS-Dockerfiles](https://github.com/CentOS/CentOS-Dockerfiles) projects.
