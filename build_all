@@ -1,0 +1,13 @@
+# for d in centos7-pys centos7-pys-systemd centos8-pys centos8-pys-systemd fedora-pys fedora-pys-systemd
+for d in fedora-pys fedora-pys-systemd
+do
+    pushd $d
+    docker build -t nmusatti/$(basename $PWD) --no-cache .
+    if [[ $(basename $PWD) =~ systemd ]]; then
+        ( sudo docker run -v /sys/fs/cgroup:/sys/fs/cgroup:ro -it --rm --privileged nmusatti/$(basename $PWD) /bin/bash )
+    else
+        docker run -it --rm nmusatti/$(basename $PWD)
+    fi
+    docker push nmusatti/$(basename $PWD)
+    popd
+done
