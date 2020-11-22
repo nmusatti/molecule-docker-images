@@ -1,5 +1,4 @@
-# for d in centos7-pys centos7-pys-systemd centos8-pys centos8-pys-systemd fedora-pys fedora-pys-systemd
-for d in fedora-pys fedora-pys-systemd
+for d in centos7-pys centos7-pys-systemd centos8-pys centos8-pys-systemd fedora-pys fedora-pys-systemd
 do
     pushd $d
     docker build -t nmusatti/$(basename $PWD) --no-cache .
