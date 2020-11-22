@@ -1,4 +1,4 @@
-FROM nmusatti/fedora-pys
+FROM nmusatti/fedora-pys:32
 
 MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
 

@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:32
 LABEL maintainer Nicola Musatti <nicola.musatti@gmail.com>
 
 RUN \
