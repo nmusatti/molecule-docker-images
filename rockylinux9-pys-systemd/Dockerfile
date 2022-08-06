@@ -1,4 +1,4 @@
-FROM nmusatti/centos8-pys
+FROM nmusatti/rockylinux9-pys
 
 ENV container docker
 MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
