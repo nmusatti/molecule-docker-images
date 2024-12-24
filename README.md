@@ -5,6 +5,8 @@ The images currently available are:
 
 - [centos-stream9-pys](https://hub.docker.com/repository/docker/nmusatti/centos-stream9-pys)
 - [centos-stream9-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/centos-stream9-pys-systemd)
+- [centos-stream10-pys](https://hub.docker.com/repository/docker/nmusatti/centos-stream10-pys)
+- [centos-stream10-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/centos-stream10-pys-systemd)
 - [fedora35-pys](https://hub.docker.com/repository/docker/nmusatti/fedora35-pys)
 - [fedora35-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/fedora35-pys-systemd)
 - [fedora36-pys](https://hub.docker.com/repository/docker/nmusatti/fedora36-pys)
