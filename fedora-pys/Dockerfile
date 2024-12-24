@@ -1,4 +1,5 @@
 FROM fedora:latest
+
 LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
 
 RUN \

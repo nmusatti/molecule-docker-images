@@ -1,5 +1,6 @@
 FROM rockylinux/rockylinux:9
-LABEL maintainer Nicola Musatti <nicola.musatti@gmail.com>
+
+LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
 
 RUN \
     dnf update -y && \
@@ -8,4 +9,4 @@ RUN \
     dnf clean all && \
     rm -rf /var/cache/dnf/*
 
-ENV SHELL /bin/bash
+ENV SHELL=/bin/bash

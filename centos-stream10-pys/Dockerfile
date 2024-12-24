@@ -1,4 +1,5 @@
 FROM quay.io/centos/centos:stream10
+
 LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
 
 RUN \

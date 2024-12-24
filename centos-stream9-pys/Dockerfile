@@ -1,4 +1,5 @@
 FROM quay.io/centos/centos:stream9
+
 LABEL maintainer Nicola Musatti <nicola.musatti@gmail.com>
 
 RUN \
@@ -8,4 +9,4 @@ RUN \
     dnf clean all && \
     rm -rf /var/cache/dnf/*
 
-ENV SHELL /bin/bash
+ENV SHELL=/bin/bash

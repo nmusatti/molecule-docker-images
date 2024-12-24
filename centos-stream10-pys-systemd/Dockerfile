@@ -1,7 +1,8 @@
 FROM nmusatti/centos-stream10-pys
 
-ENV container=docker
 LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
+
+ENV container=docker
 
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
 	rm -f /lib/systemd/system/multi-user.target.wants/*;\
