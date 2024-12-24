@@ -1,10 +1,10 @@
 FROM nmusatti/ubuntu2204-pys
 
-ENV container docker
+LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
+
+ENV container=docker
 
 ARG DEBIAN_FRONTEND=noninteractive
-
-MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
 
 RUN apt-get update ; \
     apt-get install -y systemd systemd-sysv ; \

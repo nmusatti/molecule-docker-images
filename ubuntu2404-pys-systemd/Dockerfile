@@ -1,6 +1,8 @@
 FROM nmusatti/ubuntu2404-pys
 
-ENV container docker
+LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
+
+ENV container=docker
 
 ARG DEBIAN_FRONTEND=noninteractive
 
