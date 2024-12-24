@@ -1,10 +1,8 @@
 # molecule-docker-images
 
-Dockerfiles used to build a set of images based on Red Hat and derivative open distros, ready to be used with Molecule to test Ansible roles.
+Dockerfiles used to build a set of images based on currently supported Red Hat and derivative open distros, as well as Ubuntu, ready to be used with Molecule to test Ansible roles.
 The images currently available are:
 
-- [centos7-pys](https://hub.docker.com/repository/docker/nmusatti/centos7-pys)
-- [centos7-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/centos7-pys-systemd)
 - [centos-stream8-pys](https://hub.docker.com/repository/docker/nmusatti/centos-stream8-pys)
 - [centos-stream8-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/centos-stream8-pys-systemd)
 - [centos-stream9-pys](https://hub.docker.com/repository/docker/nmusatti/centos-stream9-pys)
