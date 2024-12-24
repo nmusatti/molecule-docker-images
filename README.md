@@ -27,6 +27,8 @@ The images currently available are:
 - [ubuntu2004-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/ubuntu2004-pys-systemd)
 - [ubuntu2204-pys](https://hub.docker.com/repository/docker/nmusatti/ubuntu2204-pys)
 - [ubuntu2204-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/ubuntu2204-pys-systemd)
+- [ubuntu2404-pys](https://hub.docker.com/repository/docker/nmusatti/ubuntu2404-pys)
+- [ubuntu2404-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/ubuntu2404-pys-systemd)
 - [ubuntu-pys](https://hub.docker.com/repository/docker/nmusatti/ubuntu-pys)
 - [ubuntu-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/ubuntu-pys-systemd)
 
