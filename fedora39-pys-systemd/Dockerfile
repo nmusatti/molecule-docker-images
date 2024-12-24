@@ -1,8 +1,8 @@
-FROM nmusatti/fedora35-pys
+FROM nmusatti/fedora39-pys
 
-MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
+LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
 
-ENV container docker
+ENV container=docker
 
 RUN dnf -y update && dnf clean all
 
