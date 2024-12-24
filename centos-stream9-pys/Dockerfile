@@ -1,6 +1,6 @@
 FROM quay.io/centos/centos:stream9
 
-LABEL maintainer Nicola Musatti <nicola.musatti@gmail.com>
+LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
 
 RUN \
     dnf update -y && \
