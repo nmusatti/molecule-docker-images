@@ -6,8 +6,6 @@ ENV container=docker
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-MAINTAINER Nicola Musatti <nicola.musatti@gmail.com>
-
 RUN apt-get update ; \
     apt-get install -y systemd systemd-sysv ; \
     apt-get clean ; \
