@@ -4,7 +4,7 @@ for d in centos-stream9-pys centos-stream9-pys-systemd \
 		fedora41-pys fedora41-pys-systemd fedora-pys fedora-pys-systemd \
 		rockylinux8-pys rockylinux8-pys-systemd rockylinux9-pys rockylinux9-pys-systemd \
 		ubuntu2004-pys ubuntu2004-pys-systemd ubuntu2204-pys ubuntu2204-pys-systemd \
-		ubuntu2204-pys ubuntu2204-pys-systemd ubuntu-pys ubuntu-pys-systemd
+		ubuntu2404-pys ubuntu2404-pys-systemd ubuntu-pys ubuntu-pys-systemd
 do
     pushd $d
     docker build -t nmusatti/$(basename $PWD) --no-cache .
