@@ -1,5 +1,4 @@
-for d in centos-stream8-pys centos-stream8-pys-systemd \
-		centos-stream9-pys centos-stream9-pys-systemd fedora35-pys fedora35-pys-systemd \
+for d in centos-stream9-pys centos-stream9-pys-systemd fedora35-pys fedora35-pys-systemd \
 		fedora36-pys fedora36-pys-systemd fedora37-pys fedora37-pys-systemd fedora-pys fedora-pys-systemd \
 		rockylinux8-pys rockylinux8-pys-systemd rockylinux9-pys rockylinux9-pys-systemd \
 		ubuntu1804-pys ubuntu1804-pys-systemd ubuntu2004-pys ubuntu2004-pys-systemd ubuntu2204-pys \
