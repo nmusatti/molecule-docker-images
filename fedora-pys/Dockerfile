@@ -1,8 +1,8 @@
 FROM fedora:latest
-LABEL maintainer Nicola Musatti <nicola.musatti@gmail.com>
+LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
 
 RUN \
     dnf update -y && \
     dnf install -y gcc python3 python3-libselinux python3-devel sudo
 
-ENV SHELL /bin/bash
+ENV SHELL=/bin/bash
