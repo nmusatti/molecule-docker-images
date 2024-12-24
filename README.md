@@ -19,8 +19,6 @@ The images currently available are:
 - [rockylinux8-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/rockylinux8-pys-systemd)
 - [rockylinux9-pys](https://hub.docker.com/repository/docker/nmusatti/rockylinux9-pys)
 - [rockylinux9-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/rockylinux9-pys-systemd)
-- [ubuntu1804-pys](https://hub.docker.com/repository/docker/nmusatti/ubuntu1804-pys)
-- [ubuntu1804-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/ubuntu1804-pys-systemd)
 - [ubuntu2004-pys](https://hub.docker.com/repository/docker/nmusatti/ubuntu2004-pys)
 - [ubuntu2004-pys-systemd](https://hub.docker.com/repository/docker/nmusatti/ubuntu2004-pys-systemd)
 - [ubuntu2204-pys](https://hub.docker.com/repository/docker/nmusatti/ubuntu2204-pys)
