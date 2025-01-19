@@ -9,7 +9,7 @@ do
     pushd $d
     docker build -t nmusatti/$(basename $PWD) --no-cache .
     if [[ $(basename $PWD) =~ systemd ]]; then
-        ( sudo docker run -v /sys/fs/cgroup:/sys/fs/cgroup:ro -it --rm --privileged nmusatti/$(basename $PWD) /bin/bash )
+        ( sudo docker run -v /sys/fs/cgroup:/sys/fs/cgroup:rw -it --rm --privileged nmusatti/$(basename $PWD) /bin/bash )
     else
         docker run -it --rm nmusatti/$(basename $PWD)
     fi
