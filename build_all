@@ -1,10 +1,16 @@
-for d in centos-stream9-pys centos-stream9-pys-systemd \
-		centos-stream10-pys centos-stream10-pys-systemd \
-		fedora39-pys fedora39-pys-systemd fedora40-pys fedora40-pys-systemd \
-		fedora41-pys fedora41-pys-systemd fedora-pys fedora-pys-systemd \
-		rockylinux8-pys rockylinux8-pys-systemd rockylinux9-pys rockylinux9-pys-systemd \
-		ubuntu2004-pys ubuntu2004-pys-systemd ubuntu2204-pys ubuntu2204-pys-systemd \
-		ubuntu2404-pys ubuntu2404-pys-systemd ubuntu-pys ubuntu-pys-systemd
+for i in 'quay.io/centos/centos:stream10' 'quay.io/centos/centos:stream9' 'fedora:41' 'fedora:40' 'fedora:39' \
+		'rockylinux/rockylinux:9' 'rockylinux/rockylinux:8' 'ubuntu:24.04' 'ubuntu:22.04' 'ubuntu:20.04'
+do
+	docker pull $i
+done
+
+for d in centos-stream10-pys centos-stream10-pys-systemd \
+		centos-stream9-pys centos-stream9-pys-systemd \
+		fedora41-pys fedora41-pys-systemd fedora40-pys fedora40-pys-systemd \
+		fedora39-pys fedora39-pys-systemd \
+		rockylinux9-pys rockylinux9-pys-systemd rockylinux8-pys rockylinux8-pys-systemd \
+		ubuntu2404-pys ubuntu2404-pys-systemd ubuntu2204-pys ubuntu2204-pys-systemd \
+		ubuntu2004-pys ubuntu2004-pys-systemd
 do
     pushd $d
     docker build -t nmusatti/$(basename $PWD) --no-cache .
@@ -16,3 +22,12 @@ do
     [[ $? == 0 ]] && docker push nmusatti/$(basename $PWD)
     popd
 done
+
+docker tag nmusatti/fedora41-pys nmusatti/fedora-pys
+docker push nmusatti/fedora-pys
+docker tag nmusatti/fedora41-pys-systemd nmusatti/fedora-pys-systemd
+docker push nmusatti/fedora-pys-systemd
+docker tag nmusatti/ubuntu2404-pys nmusatti/ubuntu-pys
+docker push nmusatti/ubuntu-pys
+docker tag nmusatti/ubuntu2404-pys-systemd nmusatti/ubuntu-pys-systemd
+docker push nmusatti/ubuntu-pys-systemd
