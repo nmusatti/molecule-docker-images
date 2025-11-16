@@ -1,4 +1,4 @@
-FROM nmusatti/fedora40-pys
+FROM nmusatti/fedora43-pys
 
 LABEL maintainer="Nicola Musatti <nicola.musatti@gmail.com>"
 

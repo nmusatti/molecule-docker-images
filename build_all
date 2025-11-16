@@ -1,14 +1,15 @@
-for i in 'quay.io/centos/centos:stream10' 'quay.io/centos/centos:stream9' 'fedora:42' 'fedora:41' 'fedora:40' \
-		'rockylinux/rockylinux:9' 'rockylinux/rockylinux:8' 'ubuntu:24.04' 'ubuntu:22.04'
+for i in 'quay.io/centos/centos:stream10' 'quay.io/centos/centos:stream9' 'fedora:43' 'fedora:42' 'fedora:41' \
+		'rockylinux/rockylinux:10' 'rockylinux/rockylinux:9' 'rockylinux/rockylinux:8' 'ubuntu:24.04' 'ubuntu:22.04'
 do
 	docker pull $i
 done
 
 for d in centos-stream10-pys centos-stream10-pys-systemd \
 		centos-stream9-pys centos-stream9-pys-systemd \
-		fedora42-pys fedora42-pys-systemd fedora41-pys fedora41-pys-systemd \
-		fedora40-pys fedora40-pys-systemd \
-		rockylinux9-pys rockylinux9-pys-systemd rockylinux8-pys rockylinux8-pys-systemd \
+		fedora43-pys fedora43-pys-systemd fedora42-pys fedora42-pys-systemd \
+		fedora41-pys fedora41-pys-systemd \
+		rockylinux10-pys rockylinux10-pys-systemd rockylinux9-pys rockylinux9-pys-systemd \
+		rockylinux8-pys rockylinux8-pys-systemd \
 		ubuntu2404-pys ubuntu2404-pys-systemd ubuntu2204-pys ubuntu2204-pys-systemd
 do
     pushd $d
@@ -22,9 +23,9 @@ do
     popd
 done
 
-docker tag nmusatti/fedora42-pys nmusatti/fedora-pys
+docker tag nmusatti/fedora43-pys nmusatti/fedora-pys
 docker push nmusatti/fedora-pys
-docker tag nmusatti/fedora42-pys-systemd nmusatti/fedora-pys-systemd
+docker tag nmusatti/fedora43-pys-systemd nmusatti/fedora-pys-systemd
 docker push nmusatti/fedora-pys-systemd
 docker tag nmusatti/ubuntu2404-pys nmusatti/ubuntu-pys
 docker push nmusatti/ubuntu-pys
